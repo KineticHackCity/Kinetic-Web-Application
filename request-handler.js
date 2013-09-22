@@ -170,7 +170,7 @@ exports.handleRequest = function(request, response) {
         request.on('end', function () {
           var peerData = JSON.parse(body);
 
-          var getPeersResponse = getPeersData(peerData.euiType, peerData.keepOutliers,peerData.numberOfBins, peerData.autoBin, peerData.classType, peerData.facilityType, peerData.floorArea, peerData.yearBuilt, peerData.hoursOcc, peerData.numPeople,, peerData.climateZone, peerData.state, peerData.zipCode, peerData.lighting, peerData.heating, peerData.cooling, peerData.windowGlassType, peerData.windowGlassLayer,peerData.airFlowControl,peerData.wallInsulation,peerData.roofCeil);
+          var getPeersResponse = getPeersData(peerData.euiType, peerData.keepOutliers,peerData.numberOfBins, peerData.autoBin, peerData.classType, peerData.facilityType, peerData.floorArea, peerData.yearBuilt, peerData.hoursOcc, peerData.numPeople, peerData.climateZone, peerData.state, peerData.zipCode, peerData.lighting, peerData.heating, peerData.cooling, peerData.windowGlassType, peerData.windowGlassLayer,peerData.airFlowControl,peerData.wallInsulation,peerData.roofCeil);
 
            response.end(getPeersResponse);
         });
@@ -212,9 +212,7 @@ exports.handleRequest = function(request, response) {
         //check if username is already in the database, if it isn't add it
         response.end("No Object");
      }
-     }
-      
-   } else {
+     } else {
     /* "Status code" and "headers" are HTTP concepts that you can
      * research on the web as and when it becomes necessary. */
     var statusCode = 200;
